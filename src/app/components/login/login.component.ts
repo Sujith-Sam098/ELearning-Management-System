@@ -15,12 +15,12 @@ export class LoginComponent implements OnInit {
   user = new User();
   professor = new Professor();
   msg = "";
-  adminEmail = "";
-  adminPassword = "";
-  
+  adminEmail = "ss@email.com";
+  adminPassword = "1234";
+
   constructor(private _service : LoginService, private _router : Router) { }
 
-  ngOnInit(): void 
+  ngOnInit(): void
   {
     $(".admin-login-form").hide();
     $(".professor-login-form").hide();
@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit {
       $("#adminbtn").css("border", "0").css("opacity", "1");
       $("#professorbtn").css("border", "0").css("border-right", "1.5px solid rgb(6, 50, 53)").css("border-bottom", "1.5px solid rgb(6, 50, 53)").css("opacity", "0.3");;
     });
-    
+
     $(".adminlogin").click(function(){
       $(".user-login-form").show();
       $(".admin-login-form").hide();
@@ -109,7 +109,7 @@ export class LoginComponent implements OnInit {
 
   adminLogin()
   {
-    if(this._service.adminLoginFromRemote(this.adminEmail, this.adminPassword)) 
+    if(this._service.adminLoginFromRemote(this.adminEmail, this.adminPassword))
     {
       sessionStorage.setItem('loggedUser', this.adminEmail);
       sessionStorage.setItem('USER', "admin");
@@ -118,7 +118,7 @@ export class LoginComponent implements OnInit {
       sessionStorage.setItem('gender', "male");
       this._router.navigate(['/admindashboard']);
     }
-    else 
+    else
     {
       console.log("Exception Occured");
       this.msg = 'Bad admin credentials !!!'
