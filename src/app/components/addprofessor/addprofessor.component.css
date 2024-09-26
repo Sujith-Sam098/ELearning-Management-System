@@ -60,7 +60,7 @@
 .register .nav-tabs{
     margin-top: 3%;
     border: none;
-    background: #971515;
+    background: blue;
     border-radius: 1.5rem;
     width: 28%;
     float: right;
@@ -86,8 +86,8 @@
 .highlight1, .highlight2{
     width: 100px;
     color: #fdfdfd;
-    background-color: #f14747;
-    border: 2px solid #440707;
+    background-color: aqua;
+    border: 2px solid aquamarine;
     border-top-left-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
 }
