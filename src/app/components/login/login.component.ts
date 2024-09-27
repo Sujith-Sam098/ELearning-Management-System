@@ -15,8 +15,8 @@ export class LoginComponent implements OnInit {
   user = new User();
   professor = new Professor();
   msg = "";
-  adminEmail = "ss@email.com";
-  adminPassword = "1234";
+  adminEmail = "";
+  adminPassword = "";
 
   constructor(private _service : LoginService, private _router : Router) { }
 
